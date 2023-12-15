@@ -15,13 +15,12 @@ export class LoginComponent {
   
   constructor(private userSvc: AuthService){}
 
-  onLogin(){
+  async onLogin(){
     const user = {
-      "username": "fermastro@gmail.com",
+      "username": "femastro@gmail.com",
       "password": "123456"
-    }
-    this.logged = this.userSvc.login(user)
-    console.log(this.logged);
+    };
+    (await this.userSvc.login(user)).subscribe(arg => this.logged = arg);
+    console.table(this.logged);
   }
-
 }
