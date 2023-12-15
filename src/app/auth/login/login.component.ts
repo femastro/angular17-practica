@@ -11,6 +11,8 @@ import { AuthService } from '../auth.service';
 })
 export class LoginComponent {
 
+  public logged: any;
+  
   constructor(private userSvc: AuthService){}
 
   onLogin(){
@@ -18,8 +20,8 @@ export class LoginComponent {
       "username": "fermastro@gmail.com",
       "password": "123456"
     }
-    const logged = this.userSvc.login(user)
-    console.log(logged);
+    this.logged = this.userSvc.login(user)
+    console.log(this.logged);
   }
 
 }

@@ -10,12 +10,10 @@ import { CommonModule } from '@angular/common';
 })
 export class ToolsbarComponent {
 
-  public user  = false;
-
-  
+  public user = false;
 
   logOut(){
-    this.user = false;
+    console.log("LogOut !")
   }
 
 

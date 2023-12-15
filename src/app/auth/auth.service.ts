@@ -10,7 +10,7 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   login(user: User){
-    return this.http.post('http://localhost:5173/login', user)
+    return this.http.post('http://localhost:3000/login', user)
   }
 
 
